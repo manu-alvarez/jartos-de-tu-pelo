@@ -124,7 +124,7 @@ export default function Hero() {
             <span className="absolute inset-[31%] flex flex-col items-center justify-center rounded-full bg-gold-400 text-center">
               <Zap size={22} aria-hidden="true" className="text-ink-950" />
               <span className="font-display mt-1 text-sm tracking-widest text-ink-950 uppercase">Side A</span>
-              <span className="font-sans text-[10px] font-bold tracking-[0.2em] text-ink-950/70 uppercase">92 BPM</span>
+              <span className="font-sans text-[10px] font-bold tracking-[0.2em] text-ink-950/70 uppercase">House beat</span>
             </span>
           </div>
           <p className="mt-5 text-center font-sans text-xs tracking-[0.3em] text-cream-50/45 uppercase">

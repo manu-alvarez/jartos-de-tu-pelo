@@ -36,7 +36,7 @@ src/
 ```
 
 - **Reservas:** `getBookingHref()` en `business.ts` — prioridad: URL externa → WhatsApp con mensaje pre-rellenado → teléfono → ancla `#contacto`. **DJ:** `getDjHref()` con mensaje propio de contratación. Nunca finge confirmar una cita.
-- **Música:** `src/audio/beat.ts` — loop boom-bap 92 BPM 100 % sintetizado con Web Audio (kick/snare/hats con swing + sub + crepitación de vinilo). Sin archivos ni copyright. Arranque solo por gesto del usuario (política autoplay), pastilla flotante con ecualizador, pausa al ocultar la pestaña.
+- **Música:** `public/beat.mp3` — beat de la casa en loop (`src/audio/beat.ts`, `src/components/BeatToggle.tsx`). Arranque solo por gesto del usuario (política autoplay), pastilla flotante con ecualizador, pausa al ocultar la pestaña. Para cambiar el tema, sustituye el MP3 manteniendo el nombre (`TODO-DATO-17`).
 - **SEO local:** H1 único, jerarquía H2/H3, canonical, OG/Twitter, `robots.txt`, `sitemap.xml`, JSON-LD `HairSalon` generado solo con datos reales, textos `alt` útiles.
 - **Accesibilidad:** skip-link, menú móvil con `aria-expanded` + cierre con Escape, lightbox con teclado, `prefers-reduced-motion` (CSS + Framer Motion), foco visible, áreas táctiles ≥44px.
 - **Rendimiento:** imágenes con dimensiones + `lazy` (salvo hero con `fetchPriority="high"`), sin mapa embebido pesado (enlace externo), bundle JS ~448 KB / ~143 KB gzip.

@@ -59,6 +59,7 @@ email: "hola@tudominio.es",
 | `TODO-DATO-14` | `business.ts → djAlias` | Nombre artístico en cabina (ej. `"DJ Prometeo"`). Sin esto se muestra "AKA por confirmar" |
 | `TODO-DATO-15` | `business.ts → djPriceNote` | Caché orientativo real (ej. `"Desde 150 € por sesión"`) o dejar pendiente (= "a consultar") |
 | `TODO-DATO-16` | `services.ts → djDates` | Próximas fechas con `{ date, venue, city, url? }`. Vacío = la web muestra "Fechas por confirmar" |
+| `TODO-DATO-17` | `public/beat.mp3` | Tema de fondo actual (MP3 aportado por el propietario). Para cambiarlo, sustituye el archivo manteniendo el nombre `beat.mp3` |
 
 ## ⚪ SEO, LEGAL Y MEDICIÓN (antes de publicar)
 
