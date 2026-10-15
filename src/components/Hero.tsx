@@ -20,10 +20,10 @@ export default function Hero() {
           fetchPriority="high"
           width={1408}
           height={768}
-          className="h-full w-full object-cover object-center opacity-45"
+          className="h-full w-full object-cover object-center opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/85 to-ink-950/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/95 via-ink-950/60 to-ink-950/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/50" />
       </div>
 
       <div className="relative mx-auto grid max-w-7xl gap-12 px-5 pt-36 pb-20 sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:pt-48 lg:pb-28">
