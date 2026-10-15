@@ -1,8 +1,8 @@
 /** Navegación y metadatos del sitio. */
 
 export const navLinks = [
-  { href: "#servicios", label: "Servicios" },
-  { href: "#salon", label: "El salón" },
+  { href: "#servicios", label: "Cortes" },
+  { href: "#dj", label: "DJ" },
   { href: "#galeria", label: "Galería" },
   { href: "#contacto", label: "Contacto" },
 ] as const;

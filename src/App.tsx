@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import BeatToggle from "./components/BeatToggle";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import JsonLd from "./components/JsonLd";
@@ -27,6 +28,7 @@ export default function App() {
         Saltar al contenido
       </a>
       <Header />
+      <BeatToggle />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aviso-legal" element={<AvisoLegal />} />

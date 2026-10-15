@@ -29,7 +29,7 @@ export function AvisoLegal() {
   return (
     <LegalShell title="Aviso legal">
       <p><strong className="text-cream-50">1. Titular del sitio.</strong> [RAZÓN SOCIAL / NOMBRE] · NIF [···] · Domicilio: {displayOrPending(business.address)} · Email: {displayOrPending(business.email)} · Teléfono: {displayOrPending(business.phone)}.</p>
-      <p><strong className="text-cream-50">2. Objeto.</strong> Este sitio presenta los servicios de peluquería del titular y ofrece vías de contacto y reserva (teléfono / WhatsApp / sistema externo cuando esté conectado).</p>
+      <p><strong className="text-cream-50">2. Objeto.</strong> Este sitio presenta los servicios de barbería y DJ del titular y ofrece vías de contacto y reserva (teléfono / WhatsApp / sistema externo cuando esté conectado).</p>
       <p><strong className="text-cream-50">3. Propiedad intelectual.</strong> Los contenidos propios (textos, diseño, fotografías propias cuando se incorporen) pertenecen al titular. Las imágenes de demostración actuales pertenecen a sus autores (Unsplash) y serán sustituidas.</p>
       <p><strong className="text-cream-50">4. Responsabilidad.</strong> Los precios, horarios y disponibilidad mostrados como «A confirmar / Consultar» son provisionales hasta su confirmación directa con el salón.</p>
       <p><strong className="text-cream-50">5. Legislación.</strong> Este aviso se rige por la legislación española, en particular la LSSI 34/2002.</p>

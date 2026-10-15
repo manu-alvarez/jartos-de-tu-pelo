@@ -1,6 +1,7 @@
 import About from "../components/About";
 import BookingCTA from "../components/BookingCTA";
 import Contact from "../components/Contact";
+import DjSection from "../components/DjSection";
 import Gallery from "../components/Gallery";
 import Hero from "../components/Hero";
 import Marquee from "../components/Marquee";
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Marquee />
       <Services />
+      <DjSection />
       <About />
       <Gallery />
       <Testimonials />

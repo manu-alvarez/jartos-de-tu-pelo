@@ -35,7 +35,7 @@ email: "hola@tudominio.es",
 
 | Código | Dónde | Qué poner |
 |---|---|---|
-| `TODO-DATO-20` | `services.ts → serviceCategories` | Catálogo real: por cada servicio, nombre, descripción corta (1 línea, orientada al beneficio), **precio real o `null`** (= la web muestra "Consultar"), **duración real en minutos o `null`** (= no se muestra). Si el precio es real, pon también `provisional: false` |
+| `TODO-DATO-20` | `services.ts → serviceCategories` | Catálogo real de barbería: por cada servicio, nombre, descripción corta (1 línea, con actitud), **precio real o `null`** (= la web muestra "Consultar"), **duración real en minutos o `null`** (= no se muestra). Si el precio es real, pon también `provisional: false` |
 | `TODO-DATO-02/03` | `business.ts → claim, shortDescription` | Frase de propuesta de valor + descripción de 140–160 caracteres (se usa en el hero y en el SEO) |
 | `TODO-DATO-09` | `business.ts → instagramUrl, facebookUrl, tiktokUrl` | URLs completas de perfiles (con `https://`). Los iconos aparecen solo cuando hay URL |
 | `TODO-DATO-12/13` | `business.ts → targetAudience, differentiators` | Público objetivo y 2–4 diferenciadores reales (ej. "Diagnóstico gratuito") para afinar textos |
@@ -51,6 +51,14 @@ email: "hola@tudominio.es",
 | `TODO-DATO-21` | `services.ts → testimonials` + `business.ts → hasRealReviews: true, showTestimonialsSection: true` | Añadir reseñas **reales y autorizadas** con formato `{ name: "María G.", text: "...", source: "Google", rating: 5 }`. **Prohibido inventar reseñas.** Sin esto, la sección permanece oculta por diseño |
 
 ---
+
+## 🎧 FACETA DJ (confirmada: hip hop/rap)
+
+| Código | Dónde | Qué poner |
+|---|---|---|
+| `TODO-DATO-14` | `business.ts → djAlias` | Nombre artístico en cabina (ej. `"DJ Prometeo"`). Sin esto se muestra "AKA por confirmar" |
+| `TODO-DATO-15` | `business.ts → djPriceNote` | Caché orientativo real (ej. `"Desde 150 € por sesión"`) o dejar pendiente (= "a consultar") |
+| `TODO-DATO-16` | `services.ts → djDates` | Próximas fechas con `{ date, venue, city, url? }`. Vacío = la web muestra "Fechas por confirmar" |
 
 ## ⚪ SEO, LEGAL Y MEDICIÓN (antes de publicar)
 

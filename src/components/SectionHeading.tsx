@@ -13,16 +13,16 @@ export default function SectionHeading({ eyebrow, title, copy, align = "left", d
   return (
     <Reveal className={`flex flex-col gap-4 ${alignCls}`}>
       <p
-        className={`flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.32em] ${
+        className={`font-sans text-[11px] font-bold tracking-[0.32em] uppercase ${
           dark ? "text-stone-500" : "text-gold-400"
         }`}
       >
-        <span aria-hidden="true" className={`h-px w-10 ${dark ? "bg-stone-300" : "bg-gold-500/70"}`} />
-        {eyebrow}
+        <span aria-hidden="true" className="mr-2 inline-block h-2.5 w-2.5 bg-current" />
+        [{eyebrow}]
       </p>
       <h2
-        className={`font-display max-w-3xl text-balance text-4xl leading-[1.05] font-light tracking-tight text-cream-50 sm:text-5xl ${
-          dark ? "text-stone-900" : ""
+        className={`font-display max-w-3xl text-balance text-5xl leading-[0.95] tracking-tight uppercase sm:text-6xl ${
+          dark ? "text-stone-900" : "text-cream-50"
         }`}
       >
         {title}

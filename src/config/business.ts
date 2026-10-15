@@ -21,12 +21,12 @@ export const business = {
   // ── TODO-DATO-01 · Nombre comercial exacto ──────────────────────────────
   // Ej.: "Lumina Hair Studio". Provisional visible en la web.
   name: "PROMETHEUS",
-  tagline: "Salon Experience",
+  tagline: "Barber & Beats",
   // TODO-DATO-02 · Claim / propuesta de valor (1 frase)
-  claim: "Corte de precisión, color con intención y ritual de cuidado.",
+  claim: "Degradados de precisión y DJ sets de hip hop/rap. Siéntate, suena bien, sal fresco.",
   // TODO-DATO-03 · Descripción corta para SEO y hero (140–160 caracteres)
   shortDescription:
-    "Salón especializado en corte de precisión, coloración avanzada y tratamientos capilares. Reserva tu cita.",
+    "Barbería y DJ sets de hip hop/rap: fades, barba, diseños y beats. Reserva tu corte o contrata el DJ.",
 
   // ── TODO-DATO-04 · Localización ─────────────────────────────────────────
   city: PENDIENTE, // Ej.: "Madrid"
@@ -52,6 +52,15 @@ export const business = {
   // Mensaje pre-rellenado de WhatsApp (se codifica automáticamente)
   whatsappMessage:
     "Hola, me gustaría reservar una cita. ¿Qué huecos tenéis disponibles?",
+
+  // ── TODO-DATO-14 · Faceta DJ (confirmado: hip hop/rap) ───────────────────
+  djAlias: PENDIENTE, // Ej.: "DJ Prometeo" (nombre artístico en cabina)
+  djGenres: "Hip hop / Rap",
+  // Mensaje pre-rellenado para pedir presupuesto de DJ set
+  djWhatsappMessage:
+    "Hola, me gustaría pedir presupuesto para un DJ set de hip hop/rap. ¿Hablamos?",
+  // TODO-DATO-15 · Caché / condiciones DJ (rango real o dejar pendiente)
+  djPriceNote: PENDIENTE, // Ej.: "Desde 150 € por sesión (2 h + equipo)"
 
   // ── TODO-DATO-09 · Redes sociales ───────────────────────────────────────
   instagramUrl: PENDIENTE, // Ej.: "https://instagram.com/tu_salon"
@@ -110,6 +119,14 @@ export function getBookingHref(serviceName?: string): string {
 /** ¿El enlace de reserva es real o provisional? */
 export function isBookingConfigured(): boolean {
   return Boolean(business.bookingUrl || business.whatsappHref || business.phoneHref);
+}
+
+/** URL para contratar el DJ set (misma prioridad que la reserva de corte). */
+export function getDjHref(): string {
+  if (business.whatsappHref)
+    return `https://wa.me/${business.whatsappHref}?text=${encodeURIComponent(business.djWhatsappMessage)}`;
+  if (business.phoneHref) return `tel:${business.phoneHref}`;
+  return "#contacto";
 }
 
 /** Texto visible de contacto o marcador de pendiente. */

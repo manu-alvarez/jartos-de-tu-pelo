@@ -1,7 +1,8 @@
-# PROMETHEUS · Salon Experience
+# PROMETHEUS · Barber & Beats
 
-Web profesional de peluquería: identidad editorial premium (tinta cálida + crema + dorado,
-tipografía Fraunces + Manrope), orientada a conversión con un camino de reserva claro.
+Web de barbería + DJ de hip hop/rap: identidad urbana streetwear (tinta + volt ácido +
+hueso, tipografía Anton + Space Grotesk), beat boom-bap generado por código con
+activación manual, y doble conversión (reservar corte / contratar DJ).
 
 > **Estado de los datos:** todo el contenido comercial es **provisional y configurable**.
 > No hay precios, reseñas, horarios ni direcciones reales inventadas.
@@ -34,7 +35,8 @@ src/
   index.css        ← Design tokens Tailwind v4 (@theme) + reduced-motion + focus visible
 ```
 
-- **Reservas:** `getBookingHref()` en `business.ts` — prioridad: URL externa → WhatsApp con mensaje pre-rellenado → teléfono → ancla `#contacto`. Nunca finge confirmar una cita.
+- **Reservas:** `getBookingHref()` en `business.ts` — prioridad: URL externa → WhatsApp con mensaje pre-rellenado → teléfono → ancla `#contacto`. **DJ:** `getDjHref()` con mensaje propio de contratación. Nunca finge confirmar una cita.
+- **Música:** `src/audio/beat.ts` — loop boom-bap 92 BPM 100 % sintetizado con Web Audio (kick/snare/hats con swing + sub + crepitación de vinilo). Sin archivos ni copyright. Arranque solo por gesto del usuario (política autoplay), pastilla flotante con ecualizador, pausa al ocultar la pestaña.
 - **SEO local:** H1 único, jerarquía H2/H3, canonical, OG/Twitter, `robots.txt`, `sitemap.xml`, JSON-LD `HairSalon` generado solo con datos reales, textos `alt` útiles.
 - **Accesibilidad:** skip-link, menú móvil con `aria-expanded` + cierre con Escape, lightbox con teclado, `prefers-reduced-motion` (CSS + Framer Motion), foco visible, áreas táctiles ≥44px.
 - **Rendimiento:** imágenes con dimensiones + `lazy` (salvo hero con `fetchPriority="high"`), sin mapa embebido pesado (enlace externo), bundle JS ~448 KB / ~143 KB gzip.

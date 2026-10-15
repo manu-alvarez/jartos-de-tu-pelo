@@ -36,11 +36,11 @@ export default function Gallery() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Galería"
-          title="Texturas, luz y acabado."
+          title="FADES, BARBA Y CABINA."
           copy={
             business.hasRealPhotos
-              ? "Trabajos realizados en el salón."
-              : "Imágenes de demostración (Unsplash) — pendientes de sustituir por fotografías reales del salón. No se presentan como trabajos propios."
+              ? "Trabajos realizados en el local."
+              : "Imágenes de demostración (Unsplash) — pendientes de sustituir por fotos reales del local y la cabina. No se presentan como trabajos propios."
           }
         />
 

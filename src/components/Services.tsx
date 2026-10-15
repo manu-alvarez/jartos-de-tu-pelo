@@ -14,9 +14,9 @@ export default function Services() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
-            eyebrow="Servicios y precios"
-            title="Un menú claro. Sin letra pequeña."
-            copy="Precios y duraciones marcados como «A confirmar» son provisionales: te confirmamos el importe exacto en el diagnóstico, antes de empezar. Sin sorpresas."
+            eyebrow="Cortes & precios"
+            title="MENÚ CLARO. SIN LETRA PEQUEÑA."
+            copy="Precios y duraciones marcados como «A confirmar» son provisionales: cerramos el importe contigo antes de enchufar la máquina. Sin sorpresas."
           />
         </div>
 
@@ -31,9 +31,9 @@ export default function Services() {
                 aria-controls={`panel-${c.id}`}
                 id={`tab-${c.id}`}
                 onClick={() => setActive(c.id)}
-                className={`rounded-full px-5 py-2.5 text-[12px] font-bold tracking-[0.14em] uppercase transition-all duration-200 ${
+                className={`rounded-lg px-5 py-2.5 font-sans text-[12px] font-bold tracking-[0.14em] uppercase transition-all duration-200 ${
                   active === c.id
-                    ? "bg-cream-50 text-ink-950"
+                    ? "bg-gold-400 text-ink-950 shadow-[3px_3px_0_0_rgb(244_241_234/0.85)]"
                     : "border border-cream-50/15 text-cream-50/65 hover:border-gold-400/50 hover:text-cream-50"
                 }`}
               >
@@ -50,7 +50,7 @@ export default function Services() {
           className="mt-8"
         >
           <Reveal key={category.id}>
-            <p className="font-display text-xl text-gold-300 italic">{category.tagline}</p>
+            <p className="font-display text-xl tracking-wide text-gold-300 uppercase">{category.tagline}</p>
             <ul className="mt-6 grid gap-4 md:grid-cols-2">
               {category.services.map((s, i) => {
                 const href = getBookingHref(s.name);
@@ -58,16 +58,16 @@ export default function Services() {
                 return (
                   <li
                     key={s.id}
-                    className="group hairline rounded-2xl bg-ink-900/60 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/40 hover:shadow-[0_18px_44px_-18px_rgb(198_161_91/0.45)] sm:p-7"
+                    className="group rounded-lg border-2 border-cream-50/12 bg-ink-900/60 p-6 transition-all duration-200 hover:-translate-y-1 hover:border-gold-400 hover:shadow-[6px_6px_0_0_rgb(215_255_63/0.9)] sm:p-7"
                   >
                     <div className="flex items-start justify-between gap-4">
                       <div>
-                        <p aria-hidden="true" className="font-display text-sm text-gold-500">
-                          {String(i + 1).padStart(2, "0")}
+                        <p aria-hidden="true" className="font-sans text-xs font-bold tracking-[0.2em] text-gold-400">
+                          #{String(i + 1).padStart(2, "0")}
                         </p>
-                        <h3 className="font-display mt-1 text-2xl font-light text-cream-50">{s.name}</h3>
+                        <h3 className="font-display mt-1 text-2xl tracking-wide text-cream-50 uppercase">{s.name}</h3>
                       </div>
-                      <p className="shrink-0 rounded-full border border-cream-50/12 px-3.5 py-1.5 text-sm font-bold text-cream-50">
+                      <p className="shrink-0 rounded-md bg-gold-400 px-3.5 py-1.5 font-sans text-sm font-bold text-ink-950">
                         {s.price ?? "Consultar"}
                       </p>
                     </div>

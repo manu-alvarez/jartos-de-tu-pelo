@@ -42,8 +42,8 @@ export default function Contact() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Contacto y horarios"
-          title="Encuéntranos. Te esperamos."
-          copy="Todos los datos de contacto están centralizados en src/config/business.ts. Los campos pendientes se muestran como «A confirmar» hasta recibir la información real."
+          title="CAE POR EL LOCAL."
+          copy="Cortes, DJ sets y colaboraciones: todo pasa por aquí. Datos centralizados en src/config/business.ts; lo pendiente se muestra como «A confirmar»."
         />
 
         <div className="mt-12 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">

@@ -1,36 +1,41 @@
 @import "tailwindcss";
 
 @theme {
-  /* ————— PROMETHEUS · Salon Experience — Design tokens ————— */
-  --font-display: "Fraunces", "Georgia", serif;
-  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  /* ————— PROMETHEUS · Barber & Beats — Design tokens —————
+     Tinta urbana + volt ácido + hueso. Streetwear brutalista. */
+  --font-display: "Anton", "Arial Black", sans-serif;
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
 
-  --color-ink-950: #0c0a09;
-  --color-ink-900: #141210;
-  --color-ink-800: #1c1917;
-  --color-ink-700: #292524;
-  --color-ink-600: #44403c;
+  --color-ink-950: #0a0a0b;
+  --color-ink-900: #121214;
+  --color-ink-800: #1a1a1d;
+  --color-ink-700: #26262a;
+  --color-ink-600: #3f3f46;
 
-  --color-cream-50: #faf7f2;
-  --color-cream-100: #f5efe6;
-  --color-cream-200: #e9ddcc;
-  --color-cream-300: #d9c8ae;
+  --color-cream-50: #f4f1ea;
+  --color-cream-100: #e9e4d8;
+  --color-cream-200: #d8d2c2;
+  --color-cream-300: #b9b2a0;
 
-  --color-gold-300: #e3c98f;
-  --color-gold-400: #d4b36e;
-  --color-gold-500: #c6a15b;
-  --color-gold-600: #a98542;
-  --color-gold-700: #84682f;
+  --color-gold-300: #e8ff75;
+  --color-gold-400: #d7ff3f;
+  --color-gold-500: #c2ec24;
+  --color-gold-600: #97b814;
+  --color-gold-700: #6b840c;
 
-  --color-copper-500: #b06a3b;
-  --color-copper-600: #8f5330;
+  --color-copper-500: #ff4d00;
+  --color-copper-600: #cc3d00;
 
   --color-sage-500: #7d8b6f;
 
-  --shadow-lift: 0 24px 60px -24px rgb(0 0 0 / 0.45);
-  --shadow-card: 0 12px 32px -12px rgb(0 0 0 / 0.35);
+  --shadow-lift: 0 24px 60px -24px rgb(0 0 0 / 0.6);
+  --shadow-card: 0 12px 32px -12px rgb(0 0 0 / 0.5);
+  --shadow-hard: 6px 6px 0 0 var(--color-gold-400);
+  --shadow-hard-sm: 4px 4px 0 0 var(--color-gold-400);
+  --shadow-hard-ink: 6px 6px 0 0 #0a0a0b;
 
-  --animate-marquee: marquee 28s linear infinite;
+  --animate-marquee: marquee 22s linear infinite;
+  --animate-marquee-slow: marquee 40s linear infinite;
   --animate-shine: shine 5s ease-in-out infinite;
 
   @keyframes marquee {
@@ -40,6 +45,10 @@
   @keyframes shine {
     0%, 100% { opacity: 0.35; }
     50% { opacity: 1; }
+  }
+  @keyframes eq {
+    from { transform: scaleY(0.25); }
+    to { transform: scaleY(1); }
   }
 }
 
@@ -57,20 +66,20 @@ body {
 }
 
 ::selection {
-  background: var(--color-gold-500);
-  color: #0c0a09;
+  background: var(--color-gold-400);
+  color: #0a0a0b;
 }
 
-/* Focus visible accesible y con marca */
 :focus-visible {
   outline: 2px solid var(--color-gold-400);
   outline-offset: 3px;
   border-radius: 4px;
 }
 
-/* Utilidades editoriales */
+/* ——— Utilidades de la casa ——— */
 .font-display {
   font-family: var(--font-display);
+  letter-spacing: 0.01em;
 }
 
 .text-balance {
@@ -78,11 +87,11 @@ body {
 }
 
 .hairline {
-  border: 1px solid rgb(250 247 242 / 0.12);
+  border: 1px solid rgb(244 241 234 / 0.12);
 }
 
 .gold-gradient-text {
-  background: linear-gradient(100deg, #e9d5a3 0%, #c6a15b 45%, #f3e7c8 70%, #a98542 100%);
+  background: linear-gradient(100deg, #f2ffb0 0%, #d7ff3f 45%, #f7ffe0 70%, #97b814 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -93,26 +102,67 @@ body {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.07;
+  opacity: 0.09;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Scrollbar sobria */
+/* Pegatina streetwear */
+.sticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transform: rotate(-2deg);
+  border: 2px solid #0a0a0b;
+  box-shadow: 4px 4px 0 0 rgb(10 10 11 / 0.9);
+}
+
+/* Vinilo: surcos con repeating-radial-gradient */
+.vinyl {
+  background:
+    radial-gradient(circle at center, var(--color-gold-400) 0 16%, #0a0a0b 16.5% 18%, transparent 18.5%),
+    repeating-radial-gradient(circle at center, #1c1c1f 0 2px, #0c0c0e 2px 4px);
+}
+
+/* Ecualizador del reproductor */
+.eq {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 16px;
+}
+.eq > span {
+  width: 3px;
+  height: 100%;
+  background: currentColor;
+  transform-origin: bottom;
+  transform: scaleY(0.25);
+}
+.eq.playing > span {
+  animation: eq 0.7s ease-in-out infinite alternate;
+}
+.eq.playing > span:nth-child(2) { animation-delay: 0.15s; animation-duration: 0.55s; }
+.eq.playing > span:nth-child(3) { animation-delay: 0.3s; animation-duration: 0.8s; }
+.eq.playing > span:nth-child(4) { animation-delay: 0.1s; animation-duration: 0.62s; }
+
+/* Corte de ticket */
+.ticket-cut {
+  border-top: 2px dashed rgb(244 241 234 / 0.18);
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0c0a09;
+  background: #0a0a0b;
 }
 ::-webkit-scrollbar-thumb {
-  background: #44403c;
+  background: #3f3f46;
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c6a15b;
+  background: #d7ff3f;
 }
 
-/* Respeta reduced motion globalmente (además del manejo en JS) */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

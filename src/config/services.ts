@@ -1,16 +1,15 @@
 /**
  * Catálogo de servicios — CENTRALIZADO y PROVISIONAL.
  *
- * ⚠️  TODO-DATO-20 · Sustituir por el catálogo real del salón.
+ * ⚠️  TODO-DATO-20 · Sustituir por el catálogo real de la barbería.
  * Ningún precio ni duración de este archivo es real: todos llevan
  * `provisional: true` y la UI muestra "A confirmar" / "Consultar".
  *
  * Cómo completar:
  *  1. Cambia nombre/descripción de cada servicio.
- *  2. Si el precio es real → pon `price: "32 €"` y `provisional: false`.
+ *  2. Si el precio es real → pon `price: "15 €"` y `provisional: false`.
  *     Si NO es real → deja `price: null` (la UI mostrará "Consultar").
  *  3. Igual con `durationMin` (null = no mostrar duración).
- *  4. Añade/elimina servicios libremente dentro de cada categoría.
  */
 
 export interface SalonService {
@@ -33,30 +32,30 @@ export interface ServiceCategory {
 
 export const serviceCategories: ServiceCategory[] = [
   {
-    id: "cortes",
-    label: "Cortes",
-    tagline: "Precisión, textura y movimiento a medida.",
+    id: "degradados",
+    label: "Degradados",
+    tagline: "Fades limpios, transiciones sin marcas.",
     services: [
       {
-        id: "corte-mujer",
-        name: "Corte signature",
-        description: "Diagnóstico, corte de precisión, lavado ritual y acabado peinado.",
+        id: "fade-signature",
+        name: "Degradado signature",
+        description: "Fade alto, medio o bajo a máquina y tijera, contornos a navaja y acabado.",
         price: null,
         durationMin: null,
         provisional: true,
       },
       {
-        id: "corte-hombre",
-        name: "Corte + perfilado",
-        description: "Corte con máquina/tijera, contornos definidos y acabado mate o pulido.",
+        id: "taper",
+        name: "Taper + textura",
+        description: "Limpieza de nuca y patillas con largo arriba trabajado a tijera.",
         price: null,
         durationMin: null,
         provisional: true,
       },
       {
-        id: "flequillo",
-        name: "Flequillo / retoque de puntas",
-        description: "Mantenimiento exprés entre cortes para conservar la forma.",
+        id: "clasico",
+        name: "Clásico a tijera",
+        description: "Corte atemporal, peinado y acabado con producto según tu estilo.",
         price: null,
         durationMin: null,
         provisional: true,
@@ -64,38 +63,30 @@ export const serviceCategories: ServiceCategory[] = [
     ],
   },
   {
-    id: "color",
-    label: "Coloración",
-    tagline: "Balayage, mechas y color sólido con diagnóstico previo.",
+    id: "barba",
+    label: "Barba & Ritual",
+    tagline: "Navaja, toalla caliente y línea definida.",
     services: [
       {
-        id: "balayage",
-        name: "Balayage luminoso",
-        description: "Aclarado artesanal fundido, matiz personalizado y tratamiento sellante.",
+        id: "barba-completa",
+        name: "Arreglo de barba completo",
+        description: "Diseño de línea, navaja, toalla caliente y aceites de acabado.",
         price: null,
         durationMin: null,
         provisional: true,
       },
       {
-        id: "mechas",
-        name: "Mechas / babylights",
-        description: "Luz natural o contraste definido según tu base y objetivo.",
+        id: "afeitado",
+        name: "Afeitado a navaja",
+        description: "Apurado clásico con toalla caliente y bálsamo calmante.",
         price: null,
         durationMin: null,
         provisional: true,
       },
       {
-        id: "color-raiz",
-        name: "Color de raíz + brillo",
-        description: "Cobertura uniforme y baño de brillo para medios y puntas.",
-        price: null,
-        durationMin: null,
-        provisional: true,
-      },
-      {
-        id: "matiz",
-        name: "Matiz / gloss",
-        description: "Corrección de tono y extra de brillo sin aclarar.",
+        id: "perfilado",
+        name: "Perfilado exprés",
+        description: "Contornos, patillas y cuello para aguantar el corte entre visitas.",
         price: null,
         durationMin: null,
         provisional: true,
@@ -103,30 +94,30 @@ export const serviceCategories: ServiceCategory[] = [
     ],
   },
   {
-    id: "tratamientos",
-    label: "Tratamientos",
-    tagline: "Salud capilar: hidratación, fuerza y brillo.",
+    id: "disenos",
+    label: "Diseños & Color",
+    tagline: "Líneas, freestyle y color con actitud.",
     services: [
       {
-        id: "keratina",
-        name: "Alisado / keratina",
-        description: "Disciplina anti-encrespamiento con acabado suave. Diagnóstico previo.",
+        id: "diseno-freestyle",
+        name: "Diseño freestyle",
+        description: "Líneas y dibujos a máquina. Trae tu referencia o lo creamos aquí.",
         price: null,
         durationMin: null,
         provisional: true,
       },
       {
-        id: "hidratacion",
-        name: "Ritual hidratante",
-        description: "Higiene profunda, mascarilla profesional y sellado de cutícula.",
+        id: "tinte",
+        name: "Tinte / pigmentación",
+        description: "Negro, platino o fantasía con diagnóstico previo del cabello.",
         price: null,
         durationMin: null,
         provisional: true,
       },
       {
-        id: "cuero-cabelludo",
-        name: "Detox cuero cabelludo",
-        description: "Exfoliación suave y equilibrio para raíces sanas.",
+        id: "mechas-barber",
+        name: "Mechas & reflejos",
+        description: "Contraste arriba para coronar el corte.",
         price: null,
         durationMin: null,
         provisional: true,
@@ -134,30 +125,30 @@ export const serviceCategories: ServiceCategory[] = [
     ],
   },
   {
-    id: "peinados",
-    label: "Peinados & ocasiones",
-    tagline: "Recogidos, ondas y styling para tu día señalado.",
+    id: "packs",
+    label: "Packs & Extras",
+    tagline: "Sal del sillón redondo, de una sentada.",
     services: [
       {
-        id: "peinado-evento",
-        name: "Peinado de evento",
-        description: "Ondas, trenzas o pulidos con fijación flexible y prueba previa opcional.",
+        id: "pack-completo",
+        name: "Pack corte + barba",
+        description: "El servicio completo: fade, barba ritual y acabado total.",
         price: null,
         durationMin: null,
         provisional: true,
       },
       {
-        id: "recogido-novia",
-        name: "Recogido novia + prueba",
-        description: "Diseño personalizado con prueba anticipada y coordinación del día.",
+        id: "cejas",
+        name: "Cejas & detalles",
+        description: "Limpieza de cejas, vello de orejas y retoques de precisión.",
         price: null,
         durationMin: null,
         provisional: true,
       },
       {
-        id: "brushing",
-        name: "Brushing / styling",
-        description: "Acabado liso, con volumen o wavy para el día a día.",
+        id: "infantil",
+        name: "Corte infantil",
+        description: "Primeros cortes con paciencia y estilo desde peques.",
         price: null,
         durationMin: null,
         provisional: true,
@@ -169,8 +160,6 @@ export const serviceCategories: ServiceCategory[] = [
 /**
  * ⚠️  TODO-DATO-21 · Testimonios REALES.
  * Vacío por defecto para NO inventar reseñas.
- * Añade objetos SOLO con opiniones verificadas y autorizadas:
- *   { name: "María G.", text: "...", source: "Google", rating: 5 }
  */
 export interface Testimonial {
   name: string;
@@ -182,9 +171,22 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [];
 
 /**
- * Galería de demostración (Unsplash). NO son trabajos del salón.
+ * ⚠️  TODO-DATO-16 · Próximas fechas DJ.
+ * Vacío por defecto: la sección muestra "Fechas por confirmar".
+ * Formato: { date: "Sáb 24 MAY", venue: "Sala X", city: "Madrid", url: "https://..." }
+ */
+export interface DjDate {
+  date: string;
+  venue: string;
+  city: string;
+  url?: string;
+}
+
+export const djDates: DjDate[] = [];
+
+/**
+ * Galería de demostración (Unsplash). NO son trabajos del local.
  * ⚠️  TODO-DATO-22 · Sustituir por fotografías propias.
- * Cuando `hasRealPhotos = true`, cambia `demo: false` y usa /public/galeria/*.
  */
 export interface GalleryImage {
   src: string;
@@ -195,39 +197,39 @@ export interface GalleryImage {
 
 export const galleryImages: GalleryImage[] = [
   {
-    src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=80",
-    alt: "Interior luminoso de salón de peluquería (imagen de demostración)",
-    tag: "Salón",
+    src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80",
+    alt: "Barbero recortando degradado (imagen de demostración)",
+    tag: "Fade",
     demo: true,
   },
   {
-    src: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=900&q=80",
-    alt: "Estilista peinando melena larga (imagen de demostración)",
-    tag: "Styling",
+    src: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=900&q=80",
+    alt: "Interior de barbería con sillones clásicos (imagen de demostración)",
+    tag: "Shop",
     demo: true,
   },
   {
-    src: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=900&q=80",
-    alt: "Retrato con peinado de ondas (imagen de demostración)",
-    tag: "Peinado",
-    demo: true,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=80",
-    alt: "Detalle de maquillaje y cabello (imagen de demostración)",
+    src: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=900&q=80",
+    alt: "Detalle de corte a máquina (imagen de demostración)",
     tag: "Detalle",
     demo: true,
   },
   {
-    src: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=900&q=80",
-    alt: "Lavado capilar en salón (imagen de demostración)",
-    tag: "Ritual",
+    src: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=900&q=80",
+    alt: "Mezclador DJ en cabina (imagen de demostración)",
+    tag: "Cabina",
     demo: true,
   },
   {
-    src: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=80",
-    alt: "Melena rubia con movimiento (imagen de demostración)",
-    tag: "Color",
+    src: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=900&q=80",
+    alt: "Micrófono sobre escenario (imagen de demostración)",
+    tag: "Directo",
+    demo: true,
+  },
+  {
+    src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=80",
+    alt: "Perfilado de barba con navaja (imagen de demostración)",
+    tag: "Barba",
     demo: true,
   },
 ];
