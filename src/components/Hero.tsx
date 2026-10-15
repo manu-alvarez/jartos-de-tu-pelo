@@ -2,8 +2,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDown, CalendarCheck, Disc3, MapPin, Scissors, Zap } from "lucide-react";
 import { business, displayOrPending, getBookingHref, getDjHref } from "../config/business";
 
-const HERO_IMG =
-  "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80";
+const HERO_IMG = `${import.meta.env.BASE_URL}portada.jpg`;
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -19,7 +18,9 @@ export default function Hero() {
           src={HERO_IMG}
           alt=""
           fetchPriority="high"
-          className="h-full w-full object-cover object-center opacity-35 grayscale-[35%]"
+          width={1408}
+          height={768}
+          className="h-full w-full object-cover object-center opacity-45"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/85 to-ink-950/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/60" />
