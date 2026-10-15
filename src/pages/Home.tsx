@@ -1,7 +1,6 @@
 import About from "../components/About";
 import BookingCTA from "../components/BookingCTA";
 import Contact from "../components/Contact";
-import CoverBand from "../components/CoverBand";
 import DjSection from "../components/DjSection";
 import Gallery from "../components/Gallery";
 import Hero from "../components/Hero";
@@ -13,7 +12,6 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <CoverBand />
       <Marquee />
       <Services />
       <DjSection />
