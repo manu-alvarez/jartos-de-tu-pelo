@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/prometheus-salon/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0c0a09" />
+
+    <!-- SEO principal (valores provisionales: completar en src/config/business.ts) -->
+    <title>PROMETHEUS · Salon Experience — Peluquería | Corte, color y tratamiento</title>
+    <meta
+      name="description"
+      content="PROMETHEUS Salon Experience: peluquería especializada en corte de precisión, coloración avanzada (balayage, mechas) y tratamientos capilares. Reserva tu cita por teléfono o WhatsApp."
+    />
+    <link rel="canonical" href="https://manu-alvarez.github.io/prometheus-salon/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="PROMETHEUS Salon Experience" />
+    <meta name="geo.region" content="ES" />
+
+    <!-- Open Graph / compartir -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="PROMETHEUS Salon Experience" />
+    <meta property="og:title" content="PROMETHEUS · Salon Experience — Peluquería" />
+    <meta
+      property="og:description"
+      content="Corte de precisión, color avanzado y ritual de tratamiento. Reserva tu cita en un clic."
+    />
+    <meta property="og:image" content="https://manu-alvarez.github.io/prometheus-salon/og-cover.svg" />
+    <meta property="og:url" content="https://manu-alvarez.github.io/prometheus-salon/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Tipografías: Fraunces (display serif) + Manrope (sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Datos estructurados: se completan dinámicamente desde src/config/business.ts.
+         La versión estática aquí es mínima y provisional (sin dirección ni teléfono reales). -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "PROMETHEUS Salon Experience",
+        "slogan": "Salon Experience",
+        "priceRange": "€€",
+        "url": "https://manu-alvarez.github.io/prometheus-salon/"
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

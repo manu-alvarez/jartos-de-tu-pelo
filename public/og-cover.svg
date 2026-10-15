@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0c0a09"/>
+  <circle cx="1050" cy="120" r="320" fill="#c6a15b" opacity="0.12"/>
+  <circle cx="120" cy="560" r="260" fill="#c6a15b" opacity="0.08"/>
+  <text x="100" y="270" font-family="Georgia, serif" font-size="96" letter-spacing="18" fill="#faf7f2">PROMETHEUS</text>
+  <text x="104" y="330" font-family="Verdana, sans-serif" font-size="30" letter-spacing="14" fill="#c6a15b">SALON EXPERIENCE</text>
+  <rect x="100" y="370" width="80" height="2" fill="#c6a15b"/>
+  <text x="100" y="425" font-family="Verdana, sans-serif" font-size="30" fill="#faf7f2" opacity="0.75">Corte de precisión · Color avanzado · Ritual capilar</text>
+  <!-- TODO-DATO: sustituir por fotografía real del salón (1200×630, /public/og-cover.jpg) -->
+</svg>
