@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDown, CalendarCheck, Disc3, MapPin, Scissors } from "lucide-react";
 import { business, displayOrPending, getBookingHref, getDjHref } from "../config/business";
+import HeroEmblem from "./HeroEmblem";
 
 const HERO_IMG = `${import.meta.env.BASE_URL}portada.jpg`;
 
@@ -28,13 +29,14 @@ export default function Hero() {
       </div>
 
       {/* Contenido: debajo del póster, sobre tinta */}
-      <div className="relative mx-auto max-w-7xl px-5 pt-10 pb-16 sm:px-8 lg:pt-12 lg:pb-20">
-        <motion.div
-          initial={reduce ? false : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-wrap gap-2"
-        >
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-5 pt-10 pb-16 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pt-12 lg:pb-20">
+        <div>
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-wrap gap-2"
+          >
           <span className="sticker bg-gold-400 px-4 py-1.5 font-sans text-[11px] font-bold tracking-[0.24em] text-ink-950 uppercase">
             <Scissors size={13} aria-hidden="true" />
             Barbería
@@ -108,6 +110,23 @@ export default function Hero() {
             </div>
           ))}
         </motion.dl>
+        </div>
+
+        {/* Emblema: vinilo + tijera + navaja */}
+        <motion.aside
+          initial={reduce ? false : { opacity: 0, scale: 0.94, rotate: 4 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 0.7, delay: 0.25 }}
+          aria-hidden="true"
+          className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-md"
+        >
+          <div className="rotate-2 rounded-2xl border-2 border-cream-50/12 bg-ink-900/60 p-6 shadow-[8px_8px_0_0_rgb(215_255_63/0.9)] sm:p-8">
+            <HeroEmblem />
+          </div>
+          <p className="sticker absolute -top-3 left-6 bg-copper-500 px-3 py-1 font-sans text-[10px] font-bold tracking-[0.24em] text-cream-50 uppercase">
+            Barber × DJ
+          </p>
+        </motion.aside>
       </div>
     </section>
   );
