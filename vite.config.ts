@@ -6,6 +6,6 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   // Base para GitHub Pages (sitio de proyecto). Si se usa dominio propio,
   // cambiar a '/' y ajustar basename en App.tsx + rutas en index.html.
-  base: '/prometheus-salon/',
+  base: '/jartos-de-tu-pelo/',
   plugins: [react(), tailwindcss()],
 })

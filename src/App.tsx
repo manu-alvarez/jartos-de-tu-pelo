@@ -18,7 +18,7 @@ function ScrollToTop() {
 export default function App() {
   return (
     // basename = subruta de GitHub Pages. Con dominio propio, quitarlo.
-    <BrowserRouter basename="/prometheus-salon">
+    <BrowserRouter basename="/jartos-de-tu-pelo">
       <ScrollToTop />
       <JsonLd />
       <a

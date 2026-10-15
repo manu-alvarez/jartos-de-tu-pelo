@@ -14,7 +14,7 @@ No hay que tocar ningún componente: toda la web bebe de esos dos archivos.
 
 | Código | Dónde | Qué poner | Ejemplo |
 |---|---|---|---|
-| `TODO-DATO-01` | `business.ts → name` | Nombre comercial exacto del salón | `"Lumina Hair Studio"` |
+| `TODO-DATO-01` | `business.ts → name` | ✅ Confirmado: `"JARTOS"` + tagline `"de tu Pelo"` | — |
 | `TODO-DATO-04` | `business.ts → city, neighborhood, address, mapsUrl` | Ciudad, barrio/zona, dirección completa y enlace "Cómo llegar" de Google Maps (abre Google Maps → Compartir → Copiar enlace; **no necesita API key**) | `"Madrid"`, `"Malasaña"`, `"Calle del Pez 21, Bajo — 28004 Madrid"` |
 | `TODO-DATO-07` | `business.ts → phone, phoneHref, whatsapp, whatsappHref, email` | Teléfono visible + versión `tel:` (solo dígitos con prefijo, sin espacios), WhatsApp visible + versión `wa.me` (solo dígitos con prefijo país, sin `+` ni espacios), email | visible `"910 123 456"`, `phoneHref: "+34910123456"` … espera, formato: ver nota ⬇ |
 | `TODO-DATO-08` | `business.ts → bookingUrl, bookingMode` | URL del sistema de reservas si existe (Fresha, Treatwell, Booksy, Calendly…). Si se deja vacía, la web reserva automáticamente por **WhatsApp → teléfono** | `"https://www.fresha.com/..."` |
@@ -65,7 +65,7 @@ email: "hola@tudominio.es",
 
 | Código | Dónde | Qué poner |
 |---|---|---|
-| `TODO-DATO-11` | `business.ts → domain`, `index.html` (canonical + og:url), `public/robots.txt`, `public/sitemap.xml` | Dominio real (ej. `https://www.tusalon.es`). Estado actual: apunta a la URL provisional de GitHub Pages (`https://manu-alvarez.github.io/prometheus-salon`). Al tener dominio propio, buscar esa URL en el proyecto y sustituir en esos 4 sitios, más `base` en `vite.config.ts` y `basename` en `src/App.tsx` |
+| `TODO-DATO-11` | `business.ts → domain`, `index.html` (canonical + og:url), `public/robots.txt`, `public/sitemap.xml` | Dominio real (ej. `https://www.tusalon.es`). Estado actual: apunta a la URL provisional de GitHub Pages (`https://manu-alvarez.github.io/jartos-de-tu-pelo`). Al tener dominio propio, buscar esa URL en el proyecto y sustituir en esos 4 sitios, más `base` en `vite.config.ts` y `basename` en `src/App.tsx` |
 | `TODO-DATO-30/31/32` | `src/pages/Legal.tsx` | Razón social, NIF, domicilio y email del titular en Aviso legal / Privacidad / Cookies. Textos marcados como **provisionales**: revisarlos con el titular antes de publicar |
 | `TODO-DATO-33` | (futuro) | Analítica: si se quiere medir visitas, decidir herramienta (Plausible/Umami/GA4) y se integrará con aviso de cookies real. Hoy: **cero cookies de seguimiento, cero banners ficticios** |
 

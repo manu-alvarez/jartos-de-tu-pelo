@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://manu-alvarez.github.io/prometheus-salon/sitemap.xml
+Sitemap: https://manu-alvarez.github.io/jartos-de-tu-pelo/sitemap.xml

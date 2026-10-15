@@ -1,4 +1,4 @@
-# PROMETHEUS · Barber & Beats
+# JARTOS de tu Pelo · Barber & Beats
 
 Web de barbería + DJ de hip hop/rap: identidad urbana streetwear (tinta + volt ácido +
 hueso, tipografía Anton + Space Grotesk), beat boom-bap generado por código con
@@ -43,7 +43,7 @@ src/
 
 ## Decisiones y supuestos documentados
 
-1. **Marca provisional** "PROMETHEUS · Salon Experience" hasta recibir el nombre real (`TODO-DATO-01`).
+1. **Marca confirmada** "JARTOS de tu Pelo" (nombre aportado por el propietario, `TODO-DATO-01` ✅).
 2. **Precios:** todos `null` → la UI muestra "Consultar" + distintivo "Precio a confirmar".
 3. **Testimonios:** sección oculta hasta tener reseñas verificadas (cero reseñas inventadas).
 4. **Galería:** 6 fotos Unsplash marcadas como demo; sustituir por propias (`TODO-DATO-22`).

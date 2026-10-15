@@ -18,10 +18,9 @@ export interface OpeningDay {
 }
 
 export const business = {
-  // ── TODO-DATO-01 · Nombre comercial exacto ──────────────────────────────
-  // Ej.: "Lumina Hair Studio". Provisional visible en la web.
-  name: "PROMETHEUS",
-  tagline: "Barber & Beats",
+  // ── TODO-DATO-01 · Nombre comercial — ✅ CONFIRMADO por el propietario ───
+  name: "JARTOS",
+  tagline: "de tu Pelo",
   // TODO-DATO-02 · Claim / propuesta de valor (1 frase)
   claim: "Degradados de precisión y DJ sets de hip hop/rap. Siéntate, suena bien, sal fresco.",
   // TODO-DATO-03 · Descripción corta para SEO y hero (140–160 caracteres)
@@ -82,7 +81,7 @@ export const business = {
   // ── TODO-DATO-11 · Dominio web real (para canonical y SEO) ───────────────
   // Provisional: URL de GitHub Pages. Al tener dominio propio, sustituir aquí,
   // en index.html, public/robots.txt y public/sitemap.xml.
-  domain: "https://manu-alvarez.github.io/prometheus-salon",
+  domain: "https://manu-alvarez.github.io/jartos-de-tu-pelo",
 
   // ── Marca / posicionamiento (completar para afinar copy) ────────────────
   // TODO-DATO-12
