@@ -56,7 +56,7 @@ email: "hola@tudominio.es",
 
 | Código | Dónde | Qué poner |
 |---|---|---|
-| `TODO-DATO-11` | `business.ts → domain`, `index.html` (canonical + og:url), `public/robots.txt`, `public/sitemap.xml` | Dominio real (ej. `https://www.tusalon.es`). Buscar `tu-dominio.es` en el proyecto y sustituir en los 4 sitios |
+| `TODO-DATO-11` | `business.ts → domain`, `index.html` (canonical + og:url), `public/robots.txt`, `public/sitemap.xml` | Dominio real (ej. `https://www.tusalon.es`). Estado actual: apunta a la URL provisional de GitHub Pages (`https://manu-alvarez.github.io/prometheus-salon`). Al tener dominio propio, buscar esa URL en el proyecto y sustituir en esos 4 sitios, más `base` en `vite.config.ts` y `basename` en `src/App.tsx` |
 | `TODO-DATO-30/31/32` | `src/pages/Legal.tsx` | Razón social, NIF, domicilio y email del titular en Aviso legal / Privacidad / Cookies. Textos marcados como **provisionales**: revisarlos con el titular antes de publicar |
 | `TODO-DATO-33` | (futuro) | Analítica: si se quiere medir visitas, decidir herramienta (Plausible/Umami/GA4) y se integrará con aviso de cookies real. Hoy: **cero cookies de seguimiento, cero banners ficticios** |
 
